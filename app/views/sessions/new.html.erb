@@ -1,15 +1,38 @@
+<div class="container">
+<h1 class="logo"><%= image_tag("ironspot.gif") %></h1>
+<div class="content">
+
+<div id="login" class="dialog">
 <%= form_tag sessions_path do %>
-  <div class="field">
-    <%= label_tag :email %>
-    <%= text_field_tag :email, params[:email] %>
-  </div>
-  <div class="field">
-    <%= label_tag :password %>
-    <%= password_field_tag :password %>
-  </div>
-  <div class="field">
-    <%= check_box_tag :remember_me, 1, params[:remember_me] %>
-    <%= label_tag :remember_me %>
-  </div>
-  <div class="actions"><%= submit_tag "Log in" %></div>
+		<fieldset>
+			<div class="field">
+				<%= label_tag (:email, "Email") %>
+    			<%= text_field_tag :email, params[:email], :class => 'text', :size => 43, :id => 'email' %>
+			</div>
+			<div class="field">
+			    <%= label_tag (:password, "Password") %>
+   				<%= password_field_tag :password, params[:password], :class => 'text password',  :size => 43, :id => 'password' %>
+			</div>
+			<div class="field">
+    			<%= label_tag :remember_me %>
+			    <%= check_box_tag :remember_me, 1, params[:remember_me] %>
+    		</div>
+		</fieldset>
+		<fieldset class="submit">
+			<p>
+				<a href="https://api.heroku.com/auth/reset_password">Reset Password</a>
+			</p>
+			<div class="submit"><%= submit_tag "Log In", :class => 'submit' %></div>
+		</fieldset>
 <% end %>
+</div>
+
+<a href="https://api.heroku.com/signup" id="message">
+<span>Learn more about ironspot...</span>
+</a>
+
+</div>
+
+</div>
+</div>
+</div>

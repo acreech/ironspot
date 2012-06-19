@@ -1,6 +1,10 @@
 <%= form_for @user do |f| %>
+<div class="container">
+<div class="content">
+
+<div id="login" class="dialog">
   <% if @user.errors.any? %>
-    <div class="error_messages">
+        <div class="error_messages">
       <h2>Form is invalid</h2>
       <ul>
         <% for message in @user.errors.full_messages %>
@@ -9,17 +13,24 @@
       </ul>
     </div>
   <% end %>
+  <fieldset>
   <div class="field">
     <%= f.label :email %>
-    <%= f.text_field :email %>
+    <%= f.text_field :email, :class => 'text', :size => 43, :id => 'email'  %>
   </div>
   <div class="field">
     <%= f.label :password %>
-    <%= f.password_field :password %>
+    <%= f.password_field :password, :class => 'text password',  :size => 43, :id => 'password' %>
   </div>
   <div class="field">
     <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation %>
+    <%= f.password_field :password_confirmation, :class => 'text password',  :size => 43, :id => 'password' %>
   </div>
-  <div class="actions"><%= f.submit %></div>
+  </fieldset>
+  <fieldset class="submit">
+  <div class="submit"><%= f.submit "Create User", :class => 'submit' %></div>
+  </fieldset>
+</div>
+</div>
+</div>
 <% end %>
