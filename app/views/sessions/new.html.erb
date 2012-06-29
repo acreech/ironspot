@@ -1,9 +1,10 @@
+<%= form_tag sessions_path do %>
 <div class="container">
 <h1 class="logo"><%= image_tag("ironspot.gif") %></h1>
 <div class="content">
 
 <div id="login" class="dialog">
-<%= form_tag sessions_path do %>
+
 		<fieldset>
 			<div class="field">
 				<%= label_tag (:email, "Email") %>
@@ -24,7 +25,6 @@
 			</p>
 			<div class="submit"><%= submit_tag "Log In", :class => 'submit' %></div>
 		</fieldset>
-<% end %>
 </div>
 
 <a href="https://api.heroku.com/signup" id="message">
@@ -36,3 +36,4 @@
 </div>
 </div>
 </div>
+<% end %>

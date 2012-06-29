@@ -1,0 +1,12 @@
+<% provide(:title, 'ironspot | List Users') %>
+<div class="container">
+<div class="content">
+
+<% @user.each do |user| %>
+<li>
+<%= user.id %>
+<%= link_to user.email, user %>
+</li>
+<% end %>
+</div>
+</div>
