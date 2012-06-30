@@ -8,7 +8,6 @@ gem 'rails', '3.2.5'
 gem 'mysql2'
 
 gem 'json'
-
 gem 'therubyracer'
 
 gem  'activerecord-postgresql-adapter'
@@ -18,6 +17,7 @@ gem  'activerecord-postgresql-adapter'
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
+	gem 'pg', '~> 0.11'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
