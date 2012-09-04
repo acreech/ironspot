@@ -1,12 +1,13 @@
 <% provide(:title, 'ironspot | List Users') %>
 <div class="container">
+<h1 class="logo"><%= image_tag("ironspot.gif") %></h1>
 <div class="content">
-
+<div id="login" class="dialog">
+<p></p>
 <% @user.each do |user| %>
-<li>
-<%= user.id %>
+<p>
 <%= link_to user.email, user %>
-</li>
+</p>
 <% end %>
 </div>
-</div>
+</div></div>

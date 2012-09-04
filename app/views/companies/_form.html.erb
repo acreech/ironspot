@@ -1,4 +1,5 @@
 <%= form_for(@company) do |f| %>
+ <div id="login" class="dialog">
   <% if @company.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@company.errors.count, "error") %> prohibited this company from being saved:</h2>
@@ -10,16 +11,16 @@
       </ul>
     </div>
   <% end %>
-
+<fieldset>
   <div class="field">
     <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.text_field :name, :class => 'text', :size => 43, :id => 'name'   %>
   </div>
-  <div class="field">
-    <%= f.label :user_id %><br />
-    <%= f.number_field :user_id %>
+ </fieldset>
+ <fieldset class="submit">
+  <div class="submit">
+    <%= f.submit  "Submit", :class => 'submit' %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+ </fieldset>
+ </div>
 <% end %>

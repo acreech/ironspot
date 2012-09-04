@@ -1,3 +1,7 @@
+<div class="container">
+<h1 class="logo"><%= image_tag("ironspot.gif") %></h1>
+<div class="content">
+  <div id="login" class="dialog">
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -6,10 +10,13 @@
 </p>
 
 <p>
-  <b>User:</b>
-  <%= @company.user_id %>
+  <b>Users:</b>
+  <%= @company.users.each do |user| %>
+    <%= link_to user.email, user_path(@user) %><br>  
+  <% end %>
 </p>
 
-
+  </div>
 <%= link_to 'Edit', edit_company_path(@company) %> |
 <%= link_to 'Back', companies_path %>
+</div></div>

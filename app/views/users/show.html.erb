@@ -1,0 +1,16 @@
+<div class="container">
+<h1 class="logo"><%= image_tag("ironspot.gif") %></h1>
+<div class="content">
+<div id="login" class="dialog">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @user.email %><br>
+  <b>Company:</b>
+  <%= @user.company %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
+</div></div>
